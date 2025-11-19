@@ -1,0 +1,50 @@
+/* public/style.css - Material-ish */
+:root{
+  --bg:#f5f5f5;
+  --card:#ffffff;
+  --primary:#3F51B5;
+  --primary-strong:#3450b0;
+  --text:#222;
+  --muted:#666;
+  --radius:12px;
+  --shadow: 0 6px 18px rgba(15,15,15,0.08);
+  font-family: "Roboto", sans-serif;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--bg);
+  color:var(--text);
+}
+.card{
+  width:100%;
+  max-width:420px;
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:28px;
+  margin:24px;
+}
+.card-header h1{margin:0;font-size:22px}
+.subtitle{color:var(--muted);margin-top:6px;font-size:13px}
+.field{margin-top:14px;display:flex;flex-direction:column}
+.field label{font-size:13px;color:var(--muted);margin-bottom:6px}
+.field input{
+  padding:12px 14px;border-radius:8px;border:1px solid #e6e6e6;
+  font-size:15px;outline:none;transition:box-shadow .12s, border-color .12s;
+}
+.field input:focus{box-shadow:0 4px 14px rgba(63,81,181,0.12);border-color:var(--primary-strong)}
+.btn{
+  margin-top:18px;width:100%;padding:12px;border:0;border-radius:10px;
+  background:linear-gradient(90deg,var(--primary),var(--primary-strong));
+  color:#fff;font-weight:600;font-size:15px;cursor:pointer;
+  box-shadow:0 6px 18px rgba(63,81,181,0.18);
+}
+.btn:active{transform:translateY(1px)}
+.card-footer{margin-top:12px;color:var(--muted);font-size:12px;text-align:center}
+a.link{color:var(--primary);text-decoration:none}
+@media (max-width:520px){.card{margin:12px;padding:18px}}
